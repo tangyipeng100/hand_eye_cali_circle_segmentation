@@ -8,7 +8,7 @@ Code of the paper: [A novel hand-eye semi-automatic calibration process for lase
 
 This project is the circle segmentation implementation for robot and machine hand-eye calibration based on the [PointNet-based](https://github.com/charlesq34/pointnet) networks. The project includes:
 
-- Training, evaluation and testing of the [Standard Sphere Seg Dataset V1]().
+- Training, evaluation and testing of the [Standard Sphere Seg Dataset V1](./data).
 - Profile files batch segmentation and fitting based on the pretrained networks and RANSAC method.
 
 
@@ -64,7 +64,7 @@ hand_eye_cali_circle_segmentation
 
 ## 4. Dataset
 
-Dataset has been put on the `data`folder: [dataset readme]()
+Dataset has been put on the `data`folder: [dataset readme](https://gitee.com/tangyipeng100/hand_eye_cali_circle_segmentation/blob/master/data/Standard_sphere_seg_dataset_v1/README.md)
 
 
 
