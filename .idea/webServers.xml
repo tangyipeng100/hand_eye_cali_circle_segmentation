@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cd1d0442-5bd6-4941-80f8-8f7ea34ead8b" name="lhs">
+        <fileTransfer rootFolder="/home/lhs/文档" accessType="SFTP" host="172.16.20.153" port="22" sshConfigId="6eb43c78-e978-4a20-a69e-2e283255802f" sshConfig="lhs@172.16.20.153:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

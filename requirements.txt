@@ -1,0 +1,9 @@
+matplotlib==3.2.2
+natsort==7.1.1
+numpy==1.22.4
+open3d==0.14.1
+pandas==1.1.5
+torch==1.7.1+cu110
+torchvision==0.8.2+cu110
+tqdm==4.56.0
+visdom==0.1.8.9

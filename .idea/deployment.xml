@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="lhs" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="lhs">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$USER_HOME$/Mount_2_7T/deep_learning_code2/lhs_code_mapping" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
