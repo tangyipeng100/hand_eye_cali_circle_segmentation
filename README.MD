@@ -27,7 +27,7 @@ Table 1 Performances on the validation set
 
 Table 2 Performances on the test set
 
-|  **Model**   |  OA   | IoU0  | IoU1  | mIoU  | **$\bold D_{mp}$** (mm) | **$\bold D_{r}$** (mm) | FPS  |
+|  **Model**   |  OA   | IoU0  | IoU1  | mIoU  | $D_{mp}$ (mm) | $D_{r}$ (mm) | FPS  |
 | :----------: | :---: | :---: | :---: | :---: | :---------------------: | :--------------------: | ---- |
 | PointNet-512 | 0.991 | 0.988 | 0.967 | 0.978 |          0.026          |         0.011          | 89.3 |
 | PointNet-256 | 0.991 | 0.988 | 0.967 | 0.978 |          0.026          |         0.010          | 93.5 |
@@ -64,7 +64,7 @@ hand_eye_cali_circle_segmentation
 
 ## 4. Dataset
 
-Dataset has been put on the `data`folder: [dataset readme](https://gitee.com/tangyipeng100/hand_eye_cali_circle_segmentation/blob/master/data/Standard_sphere_seg_dataset_v1/README.md)
+Dataset has been put on the `data`folder: [dataset readme](./data/Standard_sphere_seg_dataset_v1/README.md)
 
 
 

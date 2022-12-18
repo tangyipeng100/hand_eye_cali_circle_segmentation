@@ -97,7 +97,7 @@ These files contains the csv file paths, as:
 
 ## Training, evaluation and visualization
 
-Pointnet-based segmentation networks have been trained: [model checkpoint](https://storage.googleapis.com/openimages/2017_07/oidv2-resnet_v1_101.ckpt.tar.gz), [code readme](https://storage.googleapis.com/openimages/2017_07/oidv2-resnet_v1_101.readme.txt), [training code](), [Inference code](tools/classify_oidv2.py).
+Pointnet-based segmentation networks have been trained: [model checkpoint](../../checkpoints), [code readme](../../README.MD), [training code](../../train_hand_eye.py), [Inference code](../../hand_eye_infer.py).
 
 
 
