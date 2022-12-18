@@ -5,7 +5,7 @@ Standard sphere Seg is a dataset containing 2,255 profiles (or 2d point clouds) 
 
 The following figures show the hand-eye calibration testbed and give the dataset visualization. Fig. a shows the scanned standard sphere, and Fig. b shows all the labelled profiles with labels of the test set. Fig. c shows one labeled sample. Label 0 stands for the points projected on out of the standard sphere while label 1 stands for the points within the standard sphere. Besides, when labelling profiles, border region points are tended to be labelled as 0, as these points always have low measurement quality empirically.
 
-![Dataset visul_long](./assets/Dataset visul_long.jpg)
+![Dataset visul_long](https://gitee.com/tangyipeng100/hand_eye_cali_circle_segmentation/raw/master/data/Standard_sphere_seg_dataset_v1/_assets/Dataset%20visul_for_readme.jpg)
 
 ## Download the dataset
 
