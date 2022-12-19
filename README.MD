@@ -105,9 +105,9 @@ python hand_eye_infer.py --mode infer_vis
 # test set evaluation
 python hand_eye_infer.py --mode infer_results
 
-# test set circle batch segmentation and saving
+# test set circle batch segmentation and saving, related to the section 4.1.5 of the paper
 python hand_eye_infer.py --mode batch_circle_segmentation
 
-# segmented circle fitting
+# segmented circle fitting, related to the section 4.1.5 of the paper
 python ransac_circle_fitting.py
 ```
