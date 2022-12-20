@@ -1,4 +1,4 @@
-# Hand eye calibration circle segmentation
+# Hand eye calibration circle segmentation.
 
 Code of the paper: [A novel hand-eye semi-automatic calibration process for laser profilometers using machine learning](https://www.editorialmanager.com/meas/mainpage.html)
 
