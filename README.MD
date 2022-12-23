@@ -39,7 +39,7 @@ Table 2 Performances on the test set
 
 ```bash
 hand_eye_cali_circle_segmentation
-├── checkpoints
+├── checkpoints # pre-trained network files
 │   ├── PointNet_128.pkl 
 │   ├── PointNet_256.pkl
 │   └── PointNet_512.pkl
