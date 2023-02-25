@@ -52,6 +52,7 @@ hand_eye_cali_circle_segmentation
 ├── train_hand_eye.py # training
 ├── hand_eye_infer.py # evaluation, demo visualization, batch processing
 ├── ransac_circle_fitting.py # circle batch fitting
+├── RLTS_WRLTS_circle_fitting.py # RLTS and WRLTS circle fitting method
 ├── Naive_cross_line_net.py # networks definetion
 ├── training_infer_tools
 │   └── my_lr_schedule.py

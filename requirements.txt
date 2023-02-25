@@ -7,3 +7,4 @@ torch==1.7.1+cu110
 torchvision==0.8.2+cu110
 tqdm==4.56.0
 visdom==0.1.8.9
+circle-fit==0.2.0

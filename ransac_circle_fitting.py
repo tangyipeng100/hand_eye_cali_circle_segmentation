@@ -83,10 +83,10 @@ class CircleLeastSquareModel:
         B_matrix = np.array(B)
         C_matrix = A_matrix.T.dot(A_matrix)
         result = np.linalg.inv(C_matrix).dot(A_matrix.T.dot(B_matrix))
-        model.a = result[0]
-        model.b = result[1]
-        model.c = result[2]
-        return model
+        self.a = result[0]
+        self.b = result[1]
+        self.c = result[2]
+        return self
 
 
     def get_error(self, data, model):
