@@ -9,6 +9,7 @@ from matplotlib.patches import Ellipse, Circle
 import circle_fit as cf
 import argparse
 import os
+import time
 
 '''
  Code implementation of paper: Robust statistical approaches for circle fitting in laser scanning 
@@ -23,7 +24,7 @@ def parse_args():
     parser.add_argument('--h0', type=float, default=3, help='Select points number for the first fitting')
     parser.add_argument("--pr", type=float, default=0.999, help='Monte Carlo type probabilistic parameter')
     parser.add_argument("--eta", type=float, default=0.5, help='Monte Carlo type probabilistic parameter')
-    parser.add_argument("--fitting_file", type=str, default='./data/circle_fitting_files/50_noise.csv', help='Monte Carlo type probabilistic parameter')
+    parser.add_argument("--fitting_file", type=str, default='./data/circle_fitting_files/60_noise.csv', help='Monte Carlo type probabilistic parameter')
 
     opt = parser.parse_args()
     return opt
@@ -62,6 +63,7 @@ if __name__ == "__main__":
 
     model = CircleLeastSquareModel()  # 类的实例化:用最小二乘生成已知模型
     data = np.vstack([points_x, points_y]).T
+    st_time = time.time()
     for _ in range(int(In)):
         # first fitting
         random_r_in = np.random.choice(data.shape[0], size=h0, replace=False)
@@ -111,6 +113,7 @@ if __name__ == "__main__":
             min_sse = np.sum(err_n1)
             fit_r = [x1, y1, r1]
 
+    print('fitting time: ', time.time()-st_time)
     # plot
     circle2 = Circle(xy=(fit_r[0], fit_r[1]), radius=fit_r[2], fill=False, label=robust_m + ' fitting', color='b')
     plt.gcf().gca().add_artist(circle2)
