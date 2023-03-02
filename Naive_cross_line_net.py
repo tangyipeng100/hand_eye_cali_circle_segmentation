@@ -1,5 +1,3 @@
-from load_plot import profile_load
-import load_plot
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

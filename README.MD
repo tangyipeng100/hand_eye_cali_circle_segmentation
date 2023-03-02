@@ -4,6 +4,13 @@ Code of the paper: [A novel hand-eye semi-automatic calibration process for lase
 
 
 
+## Changelog
+
+- **March 2, 2023**: Add *hough_circle_fitting.py*, code implementation of Hough Transform method.
+- **Feb 25, 2023**: Add *RLTS_WRLTS_circle_fitting.py*, code implementation of RLTS and WRLTS circle fitting methods.
+
+
+
 ## 1. Introduction
 
 This project is the circle segmentation implementation for robot and machine hand-eye calibration based on the [PointNet-based](https://github.com/charlesq34/pointnet) networks. The project includes:
@@ -45,14 +52,14 @@ hand_eye_cali_circle_segmentation
 │   └── PointNet_512.pkl
 ├── data
 │   └── Standard_sphere_seg_dataset_v1
-├── load_plot.py
 ├── log
 ├── output_file
-├── requirements.txt
+├── requirements.txt # environmentrequirements
 ├── train_hand_eye.py # training
 ├── hand_eye_infer.py # evaluation, demo visualization, batch processing
 ├── ransac_circle_fitting.py # circle batch fitting
-├── RLTS_WRLTS_circle_fitting.py # RLTS and WRLTS circle fitting method
+├── RLTS_WRLTS_circle_fitting.py # RLTS and WRLTS circle fitting method 
+├── hough_circle_fitting.py.py # Hough Transform circle detection method
 ├── Naive_cross_line_net.py # networks definetion
 ├── training_infer_tools
 │   └── my_lr_schedule.py
@@ -111,4 +118,8 @@ python hand_eye_infer.py --mode batch_circle_segmentation
 
 # segmented circle fitting, related to the section 4.1.5 of the paper
 python ransac_circle_fitting.py
+
+#circle detection using Hough Transform method
+python hough_circle_fitting.py
+
 ```
