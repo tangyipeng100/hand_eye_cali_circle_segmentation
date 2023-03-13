@@ -6,6 +6,7 @@ Code of the paper: [A novel hand-eye semi-automatic calibration process for lase
 
 ## Changelog
 
+- **March 12, 2023**: Add PointNet-64 relative training code, performance, and relative checkpoint.
 - **March 2, 2023**: Add *hough_circle_fitting.py*, code implementation of Hough Transform method.
 - **Feb 25, 2023**: Add *RLTS_WRLTS_circle_fitting.py*, code implementation of RLTS and WRLTS circle fitting methods.
 
@@ -31,6 +32,7 @@ Table 1 Performances on the validation set
 | PointNet-512 | 0.993 | 0.997 | 0.993 | 0.995 |
 | PointNet-256 | 0.998 | 0.997 | 0.992 | 0.994 |
 | PointNet-128 | 0.997 | 0.996 | 0.990 | 0.993 |
+| PointNet-64  | 0.997 | 0.995 | 0.987 | 0.991 |
 
 Table 2 Performances on the test set
 
@@ -39,6 +41,7 @@ Table 2 Performances on the test set
 | PointNet-512 | 0.991 | 0.988 | 0.967 | 0.978 |          0.026          |         0.011          | 89.3 |
 | PointNet-256 | 0.991 | 0.988 | 0.967 | 0.978 |          0.026          |         0.010          | 93.5 |
 | PointNet-128 | 0.992 | 0.989 | 0.970 | 0.980 |          0.024          |         0.011          | 95.2 |
+| PointNet-64 | 0.992 | 0.989 | 0.971 | 0.980 | 0.022 | 0.010 | 96.1 |
 
 
 
@@ -47,6 +50,7 @@ Table 2 Performances on the test set
 ```bash
 hand_eye_cali_circle_segmentation
 ├── checkpoints # pre-trained network files
+│   ├── PointNet_64.pkl 
 │   ├── PointNet_128.pkl 
 │   ├── PointNet_256.pkl
 │   └── PointNet_512.pkl

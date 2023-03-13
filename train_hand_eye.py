@@ -4,6 +4,7 @@
 from Naive_cross_line_net import _512_pointnet
 from Naive_cross_line_net import _256_pointnet
 from Naive_cross_line_net import _128_pointnet
+from Naive_cross_line_net import _64_pointnet
 from Naive_cross_line_net import *
 import torch
 from torch.utils.data import DataLoader
@@ -26,9 +27,9 @@ import utils.config as con
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, default='Pointnet128', help='Pointnet512, Pointnet256, Pointnet128')
+    parser.add_argument('--model', type=str, default='Pointnet64', help='Pointnet512, Pointnet256, Pointnet128, Pointnet64')
     parser.add_argument('--dim', type=int, default=2, help='Input points data dimension, 2')
-    parser.add_argument('--num_classes', type=int, default=2, help='Segmentation classes:4, 6')
+    parser.add_argument('--num_classes', type=int, default=2, help='Segmentation classes:2')
     parser.add_argument('--normal_method', type=str, default='Whole', help='Loading profiles normalization method, Whole or Min_max')
     parser.add_argument("--model_description", type=str, default='Default_model', help='model description path')
     parser.add_argument("--visdom_env", type=str, default='circle_segmentation', help='visdom environment name')
@@ -118,6 +119,8 @@ def main(opt):
         model = _256_pointnet(opt.num_classes, opt.dim)
     elif opt.model == 'Pointnet128':
         model = _128_pointnet(opt.num_classes, opt.dim)
+    elif opt.model == 'Pointnet64':
+        model = _64_pointnet(opt.num_classes, opt.dim)
     else:
         raise Exception('No such model.')
 

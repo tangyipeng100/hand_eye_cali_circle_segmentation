@@ -20,7 +20,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--algebratic_m', type=str, default='LSQ', help='Least square method or HyperLSQ')
     parser.add_argument('--robust_m', type=str, default='WLTS', help='RLTS or WRLTS')
-    parser.add_argument('--h', type=float, default=800, help='Select points number for the second fitting')
+    parser.add_argument('--h', type=float, default=10, help='Select points number for the second fitting')
     parser.add_argument('--h0', type=float, default=3, help='Select points number for the first fitting')
     parser.add_argument("--pr", type=float, default=0.999, help='Monte Carlo type probabilistic parameter')
     parser.add_argument("--eta", type=float, default=0.5, help='Monte Carlo type probabilistic parameter')
