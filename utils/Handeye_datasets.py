@@ -192,30 +192,26 @@ class Handeye_datasets(Dataset):
     def __len__(self):
         return len(self.profile_files)
 
-def main():
-    dataset_path = '/home/tangyipeng/Mount_2_7T/data2/Hand_eye_data/train_file.txt'
-
-    train_dataset = Handeye_datasets(dataset_path, normal_method='Whole', num_classes=2, dim=2)
-    print(train_dataset.labelweights)
-    train_dataloader = torch.utils.data.DataLoader(
-        train_dataset,
-        batch_size=5,
-        shuffle=True,
-        num_workers=0,
-        pin_memory=False,
-    )
-    discrim_loss = DiscriminativeLoss(1.5, 0.5, 1.0, 1.0, gamma=0.001, norm_p=1)
-    # #sem dataloader
-    # for batch_i, (profile_im, profile_label) in enumerate(train_dataloader):
-    #     #print(batch_i)
-    #     print(profile_im.shape)
-
-    #sem & ins dataloader
-    for batch_i, (profile_im, profile_label, _, _) in enumerate(train_dataloader):
-        print(profile_im.shape)
-
-
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     dataset_path = '../data/Standard_sphere_seg_dataset_v1/train_file.txt'
+#
+#     train_dataset = Handeye_datasets(dataset_path, normal_method='Whole', num_classes=2, dim=2)
+#     print(train_dataset.labelweights)
+#     train_dataloader = torch.utils.data.DataLoader(
+#         train_dataset,
+#         batch_size=5,
+#         shuffle=True,
+#         num_workers=0,
+#         pin_memory=False,
+#     )
+#
+#
+#     #sem & ins dataloader
+#     for batch_i, (profile_im, profile_label, _, _) in enumerate(train_dataloader):
+#         print(profile_im.shape)
+#
+#
+#
+# if __name__ == '__main__':
+#     main()
 

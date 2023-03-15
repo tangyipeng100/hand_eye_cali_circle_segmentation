@@ -109,7 +109,7 @@ And we also provide training, evaluation and circle fitting demos as:
 ```bash
 # training
 python train_hand_eye.py --help #specify the parameters before running
-python train_hand_eye.py --model Pointnet128 --train_path ./data/Standard_sphere_seg_dataset_v1/train_file.txt
+python train_hand_eye.py --model Pointnet128 --train_path ./data/Standard_sphere_seg_dataset_v1/train_file.txt #performing training code
 
 # circle segmentation demo visualization 
 python hand_eye_infer.py --mode infer_vis

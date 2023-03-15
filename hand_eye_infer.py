@@ -71,9 +71,10 @@ def infer_vis():
 
     point_cloud = o3d.geometry.PointCloud()
     point_cloud.points = o3d.utility.Vector3dVector(points_p)
-    #pd.DataFrame(np.hstack([points_p, label_p])).to_csv('./test.csv', header=0, index=0, float_format='%.3f', sep=',')#save the visulization results
     point_cloud.colors = o3d.utility.Vector3dVector(color)
     o3d.visualization.draw_geometries_with_editing([point_cloud])
+    pd.DataFrame(np.hstack([points_p, label_p])).to_csv('./test.csv', header=0, index=0, float_format='%.3f', sep=',')#save the visulization results
+
 
 
 def infer_results():
@@ -179,7 +180,7 @@ def batch_circle_segmentation():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', type=str, default='infer_vis',
+    parser.add_argument('--mode', type=str, default='batch_circle_segmentation',
                         help='mode optional parameters: infer_vis, infer_results, batch_circle_segmentation,'
                              'infer_vis: show one sample inference result; infer_results: evaluate testset results; '
                              'batch_circle_segmentation: output result files of the testset ')
