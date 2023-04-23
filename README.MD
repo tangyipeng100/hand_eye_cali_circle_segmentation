@@ -6,6 +6,7 @@ Code of the paper: [A novel hand-eye semi-automatic calibration process for lase
 
 ## Changelog
 
+- **Apr 22, 2023**: Paper has been accepted by *Measurement.*
 - **March 12, 2023**: Add PointNet-64 relative training code, performance, and relative checkpoint.
 - **March 2, 2023**: Add *hough_circle_fitting.py*, code implementation of Hough Transform method.
 - **Feb 25, 2023**: Add *RLTS_WRLTS_circle_fitting.py*, code implementation of RLTS and WRLTS circle fitting methods.
@@ -14,10 +15,11 @@ Code of the paper: [A novel hand-eye semi-automatic calibration process for lase
 
 ## 1. Introduction
 
-This project is the circle segmentation implementation for robot and machine hand-eye calibration based on the [PointNet-based](https://github.com/charlesq34/pointnet) networks. The project includes:
+This repository is the circle segmentation implementation for robot and machine hand-eye calibration based on the [PointNet-based](https://github.com/charlesq34/pointnet) networks. The repository includes:
 
 - Training, evaluation and testing of the [Standard Sphere Seg Dataset V1](./data).
 - Profile files batch segmentation and fitting based on the pretrained networks and RANSAC method.
+- Performance comparison of circle segmentation methods, including PointNet-based networks, Hough transform, WRLTS, and RANSAC methods.
 
 
 
@@ -117,13 +119,13 @@ python hand_eye_infer.py --mode infer_vis
 # test set evaluation
 python hand_eye_infer.py --mode infer_results
 
-# test set circle batch segmentation and saving, related to the section 4.1.5 of the paper
+# test set circle batch segmentation and saving, related to the section 4.4.5 of the paper
 python hand_eye_infer.py --mode batch_circle_segmentation
 
-# segmented circle fitting, related to the section 4.1.5 of the paper
+# segmented circle fitting, related to the section 4.4.5 of the paper, parameters can be set in config.py
 python ransac_circle_fitting.py
 
-#circle detection using Hough Transform method
+#circle detection using Hough Transform method (this might take a very long time)
 python hough_circle_fitting.py
 
 ```

@@ -61,7 +61,7 @@ if __name__ == "__main__":
     min_sse = sys.maxsize
     fit_r = []
 
-    model = CircleLeastSquareModel()  # 类的实例化:用最小二乘生成已知模型
+    model = CircleLeastSquareModel()  # Instantiation of a class: generating a known model using least squares.
     data = np.vstack([points_x, points_y]).T
     st_time = time.time()
     for _ in range(int(In)):
@@ -81,7 +81,6 @@ if __name__ == "__main__":
         if algebratic_m == 'LSQ':
             x0 = result.a * -0.5
             y0 = result.b * -0.5
-            #r0 = 0.5 * math.sqrt(result.a ** 2 + result.b ** 2 - 4 * result.c)
             err_n0 = model.get_error(data, result)
             in_d = err_n0.argsort()[:h]
         else:

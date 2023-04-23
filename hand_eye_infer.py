@@ -9,11 +9,10 @@ from utils.Handeye_datasets import Handeye_datasets
 import utils.config as con
 
 def infer_vis():
-    file_path = os.path.join(con.dataset_pre, con.vis_file_name)#sample path and loading
     model = torch.load(con.model_path)#trained model path and loading
 
     #load data
-    sampled_profilesLabel = pd.read_csv(file_path.replace('\n', ''), sep=',', header=None)
+    sampled_profilesLabel = pd.read_csv(con.vis_file_path.replace('\n', ''), sep=',', header=None)
     sampled_profilesLabel = np.array(sampled_profilesLabel)[0:con.points_n, :]
 
     #fill points

@@ -9,8 +9,6 @@ import os
 import math
 import random
 
-# import warnings
-# warnings.simplefilter('error')
 
 class Handeye_datasets(Dataset):
     def __init__(self, file_path, dataset_pre, normal_method='Whole', num_classes=4, dim=2, point_n=1280):
@@ -157,12 +155,6 @@ class Handeye_datasets(Dataset):
         resample_xyz = np.zeros((n_resample, 2))
         resample_label = torch.zeros((n_resample, 1))
 
-        #xyz_b = xyz[i, :, :].numpy()
-        #label_b = label[i, :, :].numpy()
-        #idx = np.argwhere(np.all(xyz_b[:, :] == -1, axis=1))
-        #xyz_b = np.delete(xyz_b, idx, 0)
-        #label_b = np.delete(label_b, idx, 0)
-
         x_st = xyz[0, 0]
         x_en = xyz[-1, 0]
         x_resample = np.linspace(x_st, x_en, n_resample)
@@ -191,27 +183,4 @@ class Handeye_datasets(Dataset):
 
     def __len__(self):
         return len(self.profile_files)
-
-# def main():
-#     dataset_path = '../data/Standard_sphere_seg_dataset_v1/train_file.txt'
-#
-#     train_dataset = Handeye_datasets(dataset_path, normal_method='Whole', num_classes=2, dim=2)
-#     print(train_dataset.labelweights)
-#     train_dataloader = torch.utils.data.DataLoader(
-#         train_dataset,
-#         batch_size=5,
-#         shuffle=True,
-#         num_workers=0,
-#         pin_memory=False,
-#     )
-#
-#
-#     #sem & ins dataloader
-#     for batch_i, (profile_im, profile_label, _, _) in enumerate(train_dataloader):
-#         print(profile_im.shape)
-#
-#
-#
-# if __name__ == '__main__':
-#     main()
 

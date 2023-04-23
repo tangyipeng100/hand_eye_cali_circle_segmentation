@@ -33,7 +33,7 @@ def parse_args():
     parser.add_argument('--normal_method', type=str, default='Whole', help='Loading profiles normalization method, Whole or Min_max')
     parser.add_argument("--model_description", type=str, default='Default_model', help='model description path')
     parser.add_argument("--visdom_env", type=str, default='circle_segmentation', help='visdom environment name')
-    parser.add_argument("--epochs", type=int, default=250, help="number of epochs")
+    parser.add_argument("--epochs", type=int, default=50, help="number of epochs")
     parser.add_argument("--train_path", type=str, default='./data/Standard_sphere_seg_dataset_v1/train_file.txt', help='train file path')
     parser.add_argument("--val_path", type=str, default='./data/Standard_sphere_seg_dataset_v1/val_file.txt', help='validate file path')
     parser.add_argument("--batch_size", type=int, default=36, help='size of each profile batch')
@@ -43,7 +43,7 @@ def parse_args():
     parser.add_argument('--decay_rate', type=float, default=0, help='weight decay [default: 1e-4]')
     parser.add_argument('--decay_rate_change', type=lambda x:bool(distutils.util.strtobool(x)), default='False', help='weight decay increase with steps')
     parser.add_argument("--SGD_momentum", type=float, default=0.9, help='SGD_momentum')
-    parser.add_argument("--n_cpu", type=int, default=4, help="number of cpu threads to use during batch generation")  # 在CPU线程数足够的情况下，可以设置num_workers=四分之一到半线程数，CPU的利用率最高。
+    parser.add_argument("--n_cpu", type=int, default=4, help="number of cpu threads to use during batch generation")
     opt = parser.parse_args()
     return opt
 
@@ -61,7 +61,7 @@ def main(opt):
     def weights_init(m):
         classname = m.__class__.__name__
         if classname.find('Conv2d') != -1:
-            torch.nn.init.xavier_normal_(m.weight.data)  # 默认初始化为kaiming均匀分布，之后可以尝试
+            torch.nn.init.xavier_normal_(m.weight.data)
             torch.nn.init.constant_(m.bias.data, 0.0)
         elif classname.find('Linear') != -1:
             torch.nn.init.xavier_normal_(m.weight.data)
@@ -84,7 +84,7 @@ def main(opt):
     logger = logging.getLogger(opt.model)
     logger.setLevel(logging.INFO)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    file_handler = logging.FileHandler('%s/%s.txt' % (experiment_dir, opt.model_description+'_log_file'))#只限制目录和日志运行的模型
+    file_handler = logging.FileHandler('%s/%s.txt' % (experiment_dir, opt.model_description+'_log_file'))
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
@@ -155,7 +155,6 @@ def main(opt):
     elif opt.optimizer == 'Adamax':
         optimizer = torch.optim.Adamax(model.parameters(), lr=opt.learning_rate, betas=(0.9, 0.999), eps=1e-08, weight_decay=opt.decay_rate)
     elif opt.optimizer == 'SparseAdam':
-        #print('para model', list(model.parameters()))
         optimizer = torch.optim.SparseAdam(list(model.parameters()), lr=opt.learning_rate, betas=(0.9, 0.999), eps=1e-08)
     elif opt.optimizer == 'AdamW':
         optimizer = torch.optim.AdamW(model.parameters(), lr=opt.learning_rate, betas=(0.9, 0.999), eps=1e-08, weight_decay=opt.decay_rate, amsgrad=False)
