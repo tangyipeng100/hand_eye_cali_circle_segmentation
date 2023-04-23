@@ -17,7 +17,7 @@ Code of the paper: [A novel hand-eye semi-automatic calibration process for lase
 
 This repository is the circle segmentation implementation for robot and machine hand-eye calibration based on the [PointNet-based](https://github.com/charlesq34/pointnet) networks. The repository includes:
 
-- Training, evaluation and testing of the [Standard Sphere Seg Dataset V1](./data/Standard_sphere_seg_dataset_v1/).
+- Training, evaluation and testing code, checkpoints of the [Standard Sphere Seg Dataset V1](./data/Standard_sphere_seg_dataset_v1/).
 - Profile files batch segmentation and fitting based on the pretrained networks and RANSAC method.
 - Performance comparison of circle segmentation methods, including PointNet-based networks, Hough transform, WRLTS, and RANSAC methods.
 
@@ -128,4 +128,19 @@ python ransac_circle_fitting.py
 #circle detection using Hough Transform method (this might take a very long time)
 python hough_circle_fitting.py
 
+```
+
+
+
+## 6. Citations
+
+If you use our code or data in your research, please cite our paper:
+
+```
+@InProceedings{swinunet,
+author = {},
+title = {},
+booktitle = {},
+year = {}
+}
 ```
