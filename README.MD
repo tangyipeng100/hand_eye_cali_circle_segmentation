@@ -1,11 +1,12 @@
 # Hand eye calibration circle segmentation.
 
-Code of the paper: [A novel hand-eye semi-automatic calibration process for laser profilometers using machine learning](https://www.editorialmanager.com/meas/mainpage.html)
+Code of the paper: [A novel hand-eye semi-automatic calibration process for laser profilometers using machine learning](https://www.sciencedirect.com/science/article/pii/S0263224123005006?via%3Dihub)
 
 
 
 ## Changelog
 
+- **May 5, 2023**: Paper has been online.
 - **Apr 22, 2023**: Paper has been accepted by *Measurement.*
 - **March 12, 2023**: Add PointNet-64 relative training code, performance, and relative checkpoint.
 - **March 2, 2023**: Add *hough_circle_fitting.py*, code implementation of Hough Transform method.
