@@ -138,10 +138,7 @@ python hough_circle_fitting.py
 If you use our code or data in your research, please cite our paper:
 
 ```
-@InProceedings{swinunet,
-author = {},
-title = {},
-booktitle = {},
-year = {}
-}
+Y. Tang, W. Luo, Q. Wang, J. Li, L. Cheng, J. Li, Y. Ke, A novel hand-eye semi-
+automatic calibration process for laser profilometers using machine learning, Measurement (2023), doi: https://
+doi.org/10.1016/j.measurement.2023.112936
 ```

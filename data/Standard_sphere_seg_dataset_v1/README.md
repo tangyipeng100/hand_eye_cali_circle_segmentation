@@ -105,5 +105,10 @@ Pointnet-based segmentation networks have been trained: [model checkpoint](../..
 
 If you use the Standard Sphere Seg Dataset in your work, please cite it as:
 
-(Update after the manuscript accepted).
+```
+Y. Tang, W. Luo, Q. Wang, J. Li, L. Cheng, J. Li, Y. Ke, A novel hand-eye semi-
+automatic calibration process for laser profilometers using machine learning, Measurement (2023), doi: https://
+doi.org/10.1016/j.measurement.2023.112936
+```
+
 
