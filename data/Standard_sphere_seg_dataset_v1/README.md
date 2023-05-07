@@ -68,7 +68,7 @@ The data tarballs contain the following files:
 There's one such file for each subset inside train, validation, and test subdirectories respectively. One file is a sample, and each file contains point coordinates and labels as:
 
 ```bash
-#x,    z,      label
+# x,    z,      label
 69.280,114.785,0.000
 69.050,115.510,0.000
 68.960,115.340,0.000
