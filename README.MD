@@ -99,7 +99,7 @@ conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
 pip install -r requriements.txt
 
 # start visdom
-python -m visdom.server #Visdom need to be started before training for metrics visualization
+python -m visdom.server # Visdom need to be started before training for metrics visualization
 
 ```
 
@@ -111,8 +111,8 @@ And we also provide training, evaluation and circle fitting demos as:
 
 ```bash
 # training
-python train_hand_eye.py --help #specify the parameters before running
-python train_hand_eye.py --model Pointnet128 --train_path ./data/Standard_sphere_seg_dataset_v1/train_file.txt #performing training code
+python train_hand_eye.py --help # specify the parameters before running
+python train_hand_eye.py --model Pointnet128 --train_path ./data/Standard_sphere_seg_dataset_v1/train_file.txt # performing training code
 
 # circle segmentation demo visualization 
 python hand_eye_infer.py --mode infer_vis
@@ -120,13 +120,13 @@ python hand_eye_infer.py --mode infer_vis
 # test set evaluation
 python hand_eye_infer.py --mode infer_results
 
-# test set circle batch segmentation and saving, related to the section 4.4.5 of the paper
+# test set circle batch segmentation and saving, related to the section 4.4.6 of the paper
 python hand_eye_infer.py --mode batch_circle_segmentation
 
 # segmented circle fitting, related to the section 4.4.5 of the paper, parameters can be set in config.py
 python ransac_circle_fitting.py
 
-#circle detection using Hough Transform method (this might take a very long time)
+# circle detection using Hough Transform method (this might take a very long time)
 python hough_circle_fitting.py
 
 ```
